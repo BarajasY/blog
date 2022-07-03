@@ -30,10 +30,12 @@
 .post_header {
     display: flex;
     flex-direction: row;
+    height: fit-content;
     justify-content: space-between;
 }
 
 .post_title {
+    width: 100%;
     font-family: 'Montserrat';
     color: rgb(75, 195, 181);
     margin: 5px 0px;

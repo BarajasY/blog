@@ -1,7 +1,7 @@
 .create_container {
     width: 100%;
     min-width: 100%;
-    height: calc(100vh - 70px);
+    height: fit-content;
     background: rgb(25, 25, 25);
     display: flex;
     justify-content: center;
