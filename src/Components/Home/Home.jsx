@@ -7,7 +7,6 @@ import { FiTrash2 } from 'react-icons/fi';
 const Home = ({ isAuth }) => {
 
     const [PostsList, setPostsList] = useState([])
-    const postsCollectionRef = collection(db, 'posts');
 
     const deletePost = async (id) => {
         const postDoc = doc(db, "posts", id);
@@ -16,6 +15,7 @@ const Home = ({ isAuth }) => {
     }
 
     useEffect(() => {
+        const postsCollectionRef = collection(db, 'posts');
         const getPosts = async () => {
             const data = await getDocs(postsCollectionRef)
             setPostsList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
