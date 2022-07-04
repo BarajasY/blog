@@ -41,3 +41,12 @@
     color: #4285F4;
     background: rgb(45, 45, 45)
 }
+
+.go_home {
+    margin-top: 30px;
+    color: white;
+}
+
+.go_home a {
+    color: rgb(75, 195, 181);
+}

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './CreatePost.css';
-import { addDoc, collection } from 'firebase/firestore';
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../../firebase-config';
 import { useNavigate } from 'react-router-dom';
 
-const CreatePost = ({ isAuth }) => {
+const CreatePost = () => {
 
     const [Title, setTitle] = useState('')
     const [PostText, setPostText] = useState('')
@@ -12,7 +12,7 @@ const CreatePost = ({ isAuth }) => {
     let navigate = useNavigate();
     const postsCollectionRef = collection(db, 'posts');
     const createPost = async () => {
-        await addDoc(postsCollectionRef, { title: Title, postText: PostText, author: { name: auth.currentUser.displayName, id: auth.currentUser.uid }, });
+        await addDoc(postsCollectionRef, { title: Title, postText: PostText, author: { name: auth.currentUser.displayName, id: auth.currentUser.uid }, date: serverTimestamp() });
         navigate("/")
     };
 
