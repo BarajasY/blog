@@ -27,9 +27,6 @@ const Navbar = ({ isAuth, setIsAuth }) => {
                         <>
                             <Link to="/createpost" className="individual_link">Create Post</Link>
                             <button className="logout_button" onClick={signUserOut}>Logout</button>
-                            <div className="user_name">
-                                <h1>{auth.currentUser.displayName}</h1>
-                            </div>
                         </>
                         :
                         <Link to="/login" className="individual_link">Login</Link>
