@@ -20,7 +20,7 @@ const CreatePost = () => {
         <div className="create_container">
             <div className="create_content">
                 <div className="create_header">
-                    <h1>Create Post</h1>
+                    <h1>Share your thoughts</h1>
                 </div>
                 <div className="create_inputs">
                     <div className="individual_input">

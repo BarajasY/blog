@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 100%;
     height: calc(100vh - 70px);
-    background: rgb(45, 45, 45);
+    background: var(--color1);
     display: flex;
     justify-content: center;
 }
@@ -40,13 +40,4 @@
 .login:hover {
     color: #4285F4;
     background: rgb(45, 45, 45)
-}
-
-.go_home {
-    margin-top: 30px;
-    color: white;
-}
-
-.go_home a {
-    color: rgb(75, 195, 181);
 }

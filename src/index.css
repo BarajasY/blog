@@ -21,3 +21,9 @@ code {
 a {
   text-decoration: none;
 }
+
+:root {
+  --color1: #0d194a;
+  --color2: #d7ab5c;
+  --color3: rgb(75, 195, 181);
+}

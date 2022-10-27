@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 100%;
     height: fit-content;
-    background: rgb(25, 25, 25);
+    background: var(--color1);
     display: flex;
     justify-content: center;
 }
@@ -23,7 +23,8 @@
 
 .create_inputs {
     width: 70%;
-    background: rgb(35, 35, 35);
+    background: var(--color1);
+    border: 1px solid var(--color2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,12 +51,12 @@
     height: 40px;
     padding: 20px;
     font-size: 15px;
-    background: rgb(35, 35, 35);
+    background: var(--color1);
     border: 3px solid rgb(75, 195, 181);
     border-radius: 10px;
     color: white;
     font-family: 'Montserrat';
-    transition: .5s;
+    transition: .2s;
 }
 
 .individual_input input:focus {
@@ -66,14 +67,14 @@
 .individual_input textarea {
     width: 300px;
     height: 300px;
-    background: rgb(35, 35, 35);
+    background: var(--color1);
     border: 3px solid rgb(75, 195, 181);
     border-radius: 10px;
     padding: 20px;
     color: white;
     font-family: 'Montserrat';
     font-size: 15px;
-    transition: .5s;
+    transition: .2s;
 }
 
 .individual_input textarea:focus {
@@ -86,18 +87,18 @@
 
 .submit_button button {
     font-size: 20px;
-    background: rgb(35, 35, 35);
-    border: 2px solid white;
+    background: var(--color1);
+    border: 2px solid var(--color2);
     padding: 10px 10px;
-    color: white;
-    transition: .5s;
+    color: var(--color2);
+    transition: .2s;
     cursor: pointer;
     border-radius: 10px;
 }
 
 .submit_button button:hover {
-    color: black;
-    background: white;
+    color: var(--color1);
+    background: var(--color2);
 }
 
 @media only screen and (max-width: 991px) {

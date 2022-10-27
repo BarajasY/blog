@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase-config';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { MdOutlineAccountCircle } from 'react-icons/md';
 
 const Navbar = ({ isAuth, setIsAuth }) => {
 
@@ -21,15 +21,19 @@ const Navbar = ({ isAuth, setIsAuth }) => {
         <div className="navbar_container">
             <div className="navbar_content">
                 <div className="links">
-                    <Link to="/" className="individual_link">Home</Link>
+                    <Link to="/" className="individual_link">Blog</Link>
                     {isAuth
                         ?
                         <>
                             <Link to="/createpost" className="individual_link">Create Post</Link>
-                            <button className="logout_button" onClick={signUserOut}>Logout</button>
+                            <section id="logout">
+                                <MdOutlineAccountCircle onClick={signUserOut} className="logout_button" />
+                            </section>
                         </>
                         :
-                        <Link to="/login" className="individual_link">Login</Link>
+                        <section id="login">
+                            <MdOutlineAccountCircle className="login_button" onClick={() => navigate('/login')} />
+                        </section>
                     }
                 </div>
             </div>

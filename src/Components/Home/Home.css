@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 100%;
     height: fit-content;
-    background: rgb(60, 60, 60);
+    background: var(--color1);
     display: flex;
     justify-content: center;
 }
@@ -16,15 +16,15 @@
 .post_container {
     width: 100%;
     margin: 30px 0px;
-    background: rgb(40, 40, 40);
+    background: none;
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 5px 5px 3px black;
-    transition: .5s;
+    border: 1px solid var(--color2);
+    transition: .2s;
 }
 
 .post_container:hover {
-    transform: scale(1.005);
+    box-shadow: 3px 3px 3px 3px var(--color2);
 }
 
 .post_header {
@@ -73,17 +73,11 @@
 
 .post_author {
     margin: 10px 0px;
-    color: rgb(75, 195, 181);
+    color: var(--color2);
 }
 
 .post_footer {
     margin-top: 50px;
-}
-
-@media only screen and (max-width: 991px) {
-    .home_content {
-        width: 80%;
-    }
 }
 
 .edit_content {
@@ -142,7 +136,6 @@
     border: none;
 }
 
-
 .individual_input textarea {
     width: 300px;
     height: 300px;
@@ -191,5 +184,24 @@
 
     .individual_input textarea {
         width: 95%;
+    }
+
+    .home_content {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .post_title h1 {
+        font-size: 30px;
+    }
+
+
+    .post_edit {
+        font-size: 20px;
+    }
+
+    .post_delete {
+        font-size: 20px;
     }
 }

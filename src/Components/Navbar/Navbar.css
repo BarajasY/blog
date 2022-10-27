@@ -2,7 +2,7 @@
     width: 100%;
     min-width: 100%;
     height: 70px;
-    background: rgb(30, 30, 30);
+    background: var(--color1);
     display: flex;
     justify-content: center;
 }
@@ -22,29 +22,90 @@
 }
 
 .individual_link {
-    color: rgb(75, 195, 181);
+    color: var(--color2);
+    position: relative;
     font-size: 30px;
     transition: .5s;
+    font-family: 'Montserrat';
+    font-weight: 800;
 }
 
-.individual_link:hover {
-    opacity: 0.5;
+.individual_link::after {
+    display: block;
+    position: relative;
+    content: '';
+    width: 5px;
+    height: 2px;
+    background: white;
+    opacity: 0;
+    transition: .2s;
+}
+
+.individual_link:hover::after {
+    opacity: 1;
+    width: 100%;
+}
+
+.login_button {
+    font-size: 35px;
+    color: var(--color2);
+    cursor: pointer;
+    position: relative;
+    transition: .2s;
+}
+
+.login_button:hover {
+    color: var(--color3);
+}
+
+.links #login {
+    display: flex;
+}
+
+.links #login::after {
+    content: 'Login';
+    position: relative;
+    color: var(--color3);
+    display: block;
+    font-size: 20px;
+    opacity: 0;
+    transition: .2s;
+}
+
+.links #login:hover::after {
+    transform: translateX(2px);
+    opacity: 1;
 }
 
 .logout_button {
-    font-size: 30px;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    background: rgb(30, 30, 30);
-    color: rgb(75, 195, 181);
+    font-size: 35px;
+    color: var(--color2);
     cursor: pointer;
-    transition: .5s;
+    position: relative;
+    transition: .2s;
 }
 
 .logout_button:hover {
-    background: rgb(75, 195, 181);
-    color: rgb(30, 30, 30);
+    color: var(--color3);
+}
+
+.links #logout {
+    display: flex;
+}
+
+.links #logout::after {
+    content: 'Logout';
+    position: relative;
+    color: var(--color3);
+    display: block;
+    font-size: 20px;
+    opacity: 0;
+    transition: .2s;
+}
+
+.links #logout:hover::after {
+    transform: translateX(2px);
+    opacity: 1;
 }
 
 .user_name {
@@ -67,5 +128,15 @@
 
     .logout_button {
         font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .links #login::after {
+        display: none;
+    }
+
+    .links #logout::after {
+        display: none;
     }
 }
